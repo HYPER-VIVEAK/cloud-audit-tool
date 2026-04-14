@@ -1,0 +1,16 @@
+config/credentials.env
+
+
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+
+# Frontend/build cache
+node_modules/
+.vite/
+dist/
+
+# Editor/OS noise
+.DS_Store
+.idea/
+.vscode/
