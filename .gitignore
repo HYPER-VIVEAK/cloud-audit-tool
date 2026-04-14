@@ -1,9 +1,5 @@
 config/credentials.env
 
-# Environment files
-.env
-.env.*
-!.env.example
 
 # Python cache/bytecode
 __pycache__/
