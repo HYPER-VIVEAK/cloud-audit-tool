@@ -1,0 +1,100 @@
+@import '@mantine/core/styles.css';
+@import '@mantine/notifications/styles.css';
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+pre {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 12px;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(34, 197, 94, 0.25), transparent 36%),
+    radial-gradient(circle at 88% 18%, rgba(14, 165, 233, 0.28), transparent 34%),
+    linear-gradient(135deg, #e2e8f0 0%, #eef2ff 44%, #dbeafe 100%);
+}
+
+.login-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.login-glow-a {
+  width: 280px;
+  height: 280px;
+  background: rgba(125, 211, 252, 0.45);
+  top: 8%;
+  left: 7%;
+}
+
+.login-glow-b {
+  width: 320px;
+  height: 320px;
+  background: rgba(147, 197, 253, 0.42);
+  right: 4%;
+  bottom: 8%;
+}
+
+.login-panel {
+  width: min(960px, calc(100vw - 32px));
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(5px);
+}
+
+.login-hero {
+  min-height: 420px;
+  padding: 34px;
+  color: white;
+  background: linear-gradient(155deg, #0369a1 0%, #1d4ed8 52%, #4338ca 100%);
+}
+
+.login-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 34ch;
+}
+
+.login-form-wrap {
+  padding: 32px;
+}
+
+.login-button {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+}
+
+@media (max-width: 768px) {
+  .login-shell {
+    padding: 14px;
+  }
+
+  .login-hero,
+  .login-form-wrap {
+    padding: 20px;
+  }
+
+  .login-hero {
+    min-height: 280px;
+  }
+}

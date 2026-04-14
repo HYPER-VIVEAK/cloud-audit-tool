@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-04-14T09:08:38.415311+00:00",
+  "total_findings": 9,
+  "total_score": 51,
+  "overall_risk": "MEDIUM",
+  "by_severity": {
+    "HIGH": 6,
+    "MEDIUM": 2,
+    "LOW": 1
+  },
+  "by_scanner": {
+    "IAM": 3,
+    "Network": 3,
+    "Storage": 3
+  },
+  "scored_findings": [
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:admin",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "admin"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:jenkins",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "jenkins"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:vprofile-s3-admin",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "vprofile-s3-admin"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:security-group:sg-081c9221741fa9699",
+      "issue": "Security group 'ec2-jenkins' allows SSH (port 22) from 0.0.0.0/0",
+      "severity": "HIGH",
+      "details": {
+        "group_id": "sg-081c9221741fa9699",
+        "group_name": "ec2-jenkins",
+        "port": 22,
+        "service": "SSH",
+        "open_cidrs": [
+          "0.0.0.0/0"
+        ]
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:security-group:sg-0516528c569e7fa1f",
+      "issue": "Security group 'launch-wizard-1' allows SSH (port 22) from 0.0.0.0/0",
+      "severity": "HIGH",
+      "details": {
+        "group_id": "sg-0516528c569e7fa1f",
+        "group_name": "launch-wizard-1",
+        "port": 22,
+        "service": "SSH",
+        "open_cidrs": [
+          "0.0.0.0/0"
+        ]
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:vpc:vpc-030753e47c652e5fe",
+      "issue": "VPC does not have flow logs enabled",
+      "severity": "MEDIUM",
+      "details": {
+        "vpc_id": "vpc-030753e47c652e5fe"
+      },
+      "score": 4
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket does not have all public-access-block settings enabled",
+      "severity": "HIGH",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642",
+        "public_access_block": {
+          "BlockPublicAcls": false,
+          "IgnorePublicAcls": false,
+          "BlockPublicPolicy": false,
+          "RestrictPublicBuckets": false
+        }
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket versioning is not enabled",
+      "severity": "MEDIUM",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642",
+        "versioning_status": ""
+      },
+      "score": 4
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket access logging is not enabled",
+      "severity": "LOW",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642"
+      },
+      "score": 1
+    }
+  ],
+  "top_findings": [
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:admin",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "admin"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:jenkins",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "jenkins"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "IAM",
+      "resource": "iam:user:vprofile-s3-admin",
+      "issue": "MFA not enabled for IAM user",
+      "severity": "HIGH",
+      "details": {
+        "user": "vprofile-s3-admin"
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:security-group:sg-081c9221741fa9699",
+      "issue": "Security group 'ec2-jenkins' allows SSH (port 22) from 0.0.0.0/0",
+      "severity": "HIGH",
+      "details": {
+        "group_id": "sg-081c9221741fa9699",
+        "group_name": "ec2-jenkins",
+        "port": 22,
+        "service": "SSH",
+        "open_cidrs": [
+          "0.0.0.0/0"
+        ]
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:security-group:sg-0516528c569e7fa1f",
+      "issue": "Security group 'launch-wizard-1' allows SSH (port 22) from 0.0.0.0/0",
+      "severity": "HIGH",
+      "details": {
+        "group_id": "sg-0516528c569e7fa1f",
+        "group_name": "launch-wizard-1",
+        "port": 22,
+        "service": "SSH",
+        "open_cidrs": [
+          "0.0.0.0/0"
+        ]
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket does not have all public-access-block settings enabled",
+      "severity": "HIGH",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642",
+        "public_access_block": {
+          "BlockPublicAcls": false,
+          "IgnorePublicAcls": false,
+          "BlockPublicPolicy": false,
+          "RestrictPublicBuckets": false
+        }
+      },
+      "score": 7
+    },
+    {
+      "scanner": "Network",
+      "resource": "ec2:vpc:vpc-030753e47c652e5fe",
+      "issue": "VPC does not have flow logs enabled",
+      "severity": "MEDIUM",
+      "details": {
+        "vpc_id": "vpc-030753e47c652e5fe"
+      },
+      "score": 4
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket versioning is not enabled",
+      "severity": "MEDIUM",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642",
+        "versioning_status": ""
+      },
+      "score": 4
+    },
+    {
+      "scanner": "Storage",
+      "resource": "s3:elasticbeanstalk-us-east-1-666188383642",
+      "issue": "S3 bucket access logging is not enabled",
+      "severity": "LOW",
+      "details": {
+        "bucket": "elasticbeanstalk-us-east-1-666188383642"
+      },
+      "score": 1
+    }
+  ]
+}

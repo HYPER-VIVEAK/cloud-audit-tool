@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Security Audit Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f4f6f9; color: #333; }
+    h1 { color: #2c3e50; }
+    .summary { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .card { background: white; border-radius: 8px; padding: 1.2rem 2rem;
+             box-shadow: 0 2px 6px rgba(0,0,0,.1); min-width: 140px; text-align: center; }
+    .card .value { font-size: 2.2rem; font-weight: bold; }
+    .CRITICAL { color: #e74c3c; }
+    .HIGH { color: #e67e22; }
+    .MEDIUM { color: #f1c40f; }
+    .LOW { color: #2ecc71; }
+    .NONE { color: #27ae60; }
+    table { width: 100%; border-collapse: collapse; background: white;
+             border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+    th { background: #2c3e50; color: white; padding: .75rem 1rem; text-align: left; }
+    td { padding: .65rem 1rem; border-bottom: 1px solid #ecf0f1; }
+    tr:last-child td { border-bottom: none; }
+    .badge { display: inline-block; padding: .2rem .6rem; border-radius: 4px;
+              font-size: .8rem; font-weight: bold; color: white; }
+    .badge.CRITICAL { background: #e74c3c; }
+    .badge.HIGH { background: #e67e22; }
+    .badge.MEDIUM { background: #f39c12; color: #333; }
+    .badge.LOW { background: #2ecc71; }
+    footer { margin-top: 2rem; font-size: .85rem; color: #7f8c8d; }
+  </style>
+</head>
+<body>
+  <h1>☁️ Cloud Security Audit Report</h1>
+  <p>Generated: 2026-04-14 09:08:38 UTC</p>
+
+  <div class="summary">
+    <div class="card">
+      <div class="value">9</div>
+      <div>Total Findings</div>
+    </div>
+    <div class="card">
+      <div class="value MEDIUM">MEDIUM</div>
+      <div>Overall Risk</div>
+    </div>
+    <div class="card">
+      <div class="value CRITICAL">0</div>
+      <div>Critical</div>
+    </div>
+    <div class="card">
+      <div class="value HIGH">6</div>
+      <div>High</div>
+    </div>
+    <div class="card">
+      <div class="value MEDIUM">2</div>
+      <div>Medium</div>
+    </div>
+    <div class="card">
+      <div class="value LOW">1</div>
+      <div>Low</div>
+    </div>
+  </div>
+
+  <h2>Findings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Severity</th>
+        <th>Scanner</th>
+        <th>Resource</th>
+        <th>Issue</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>IAM</td>
+        <td>iam:user:admin</td>
+        <td>MFA not enabled for IAM user</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>IAM</td>
+        <td>iam:user:jenkins</td>
+        <td>MFA not enabled for IAM user</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>IAM</td>
+        <td>iam:user:vprofile-s3-admin</td>
+        <td>MFA not enabled for IAM user</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>Network</td>
+        <td>ec2:security-group:sg-081c9221741fa9699</td>
+        <td>Security group 'ec2-jenkins' allows SSH (port 22) from 0.0.0.0/0</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>Network</td>
+        <td>ec2:security-group:sg-0516528c569e7fa1f</td>
+        <td>Security group 'launch-wizard-1' allows SSH (port 22) from 0.0.0.0/0</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><span class="badge MEDIUM">MEDIUM</span></td>
+        <td>Network</td>
+        <td>ec2:vpc:vpc-030753e47c652e5fe</td>
+        <td>VPC does not have flow logs enabled</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><span class="badge HIGH">HIGH</span></td>
+        <td>Storage</td>
+        <td>s3:elasticbeanstalk-us-east-1-666188383642</td>
+        <td>S3 bucket does not have all public-access-block settings enabled</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><span class="badge MEDIUM">MEDIUM</span></td>
+        <td>Storage</td>
+        <td>s3:elasticbeanstalk-us-east-1-666188383642</td>
+        <td>S3 bucket versioning is not enabled</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><span class="badge LOW">LOW</span></td>
+        <td>Storage</td>
+        <td>s3:elasticbeanstalk-us-east-1-666188383642</td>
+        <td>S3 bucket access logging is not enabled</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>Cloud Audit Tool &mdash; 2026-04-14 09:08:38 UTC</footer>
+</body>
+</html>
