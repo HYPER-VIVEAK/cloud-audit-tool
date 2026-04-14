@@ -1,2 +1,25 @@
 config/credentials.env
-*.env
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python cache/bytecode
+__pycache__/
+*.py[cod]
+
+# Frontend/build cache
+node_modules/
+.vite/
+dist/
+
+# Reports generated at runtime
+reports/*.html
+reports/*.json
+!reports/.gitkeep
+
+# Editor/OS noise
+.DS_Store
+.idea/
+.vscode/
