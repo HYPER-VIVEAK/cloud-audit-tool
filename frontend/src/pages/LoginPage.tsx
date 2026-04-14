@@ -18,6 +18,7 @@ import { notifications } from '@mantine/notifications'
 import { IconShieldCheck } from '@tabler/icons-react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { resolvedApiBaseUrl } from '../api/client'
 import { useAuth } from '../context/AuthContext'
 
 export const LoginPage: React.FC = () => {
@@ -105,7 +106,7 @@ export const LoginPage: React.FC = () => {
 
             <Group justify="space-between" pt={2}>
               <Text size="xs" c="dimmed">
-                API base: {import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:8000/api'}
+                API base: {resolvedApiBaseUrl}
               </Text>
               <Anchor size="xs" href="https://github.com" target="_blank">
                 Docs
